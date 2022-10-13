@@ -4,40 +4,140 @@
 
 body {
     font-family: 'VT323', monospace;
-}
+    color: white;
+    background: black url(../image/imagem-de-fundo.jpg) center center no-repeat fixed;
+    background-size: cover;
+    font-size: 18px;
+    padding: 30px;
 
-.abas img {
-    width: 50px;
+    /* centralizando o cartão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .cartao {
-    background-color: gray;
-    width: 400px;
-    height: 600px;
-    margin: auto;
+    border-radius: 10px;
+    border: 2px solid #03DDA1;
+    background-color: #070d12;
+    width: 370px;
+    overflow: hidden;
 }
 
 .minhas-informacoes {
-    background-color: green;
-    margin: 5px;
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    gap: 10px;
+}
+
+.minhas-informacoes img {
+    border-radius: 50%;
+    border: 4px solid #03DDA1;
+}
+
+.minhas-informacoes .nome {
+    font-size: 26px;
+}
+
+.minhas-informacoes .cargo {
+    font-size: 20px;
+    color: #b8bbc5;
 }
 
 .conteudo {
-    background-color: blue;
-    margin: 5px;
+    margin-top: 15px;
 }
 
 .abas {
-    background-color: blueviolet;
-    margin: 5px;
+    display: flex;
 }
 
 .aba {
-    background-color: burlywood;
-    margin: 5px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.abas img {
+    width: 30px;
+}
+
+.aba.selecionado {
+    background-color: #262626;
+}
+
+.aba:hover {
+    background-color: #414141;
 }
 
 .informacoes-abas {
-    background-color: brown;
-    margin: 5px;
+    background-color: #262626;
+}
+
+.informacoes-abas .informacao {
+    min-height: 260px;
+    padding: 15px;
+    display: none;
+}
+
+.informacoes-abas .sub-titulo {
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.informacoes-abas .descricao {
+    font-size: 20px;
+    text-align: justify;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.informacoes-abas .descricao span {
+    color: #02d08f;
+}
+
+.informacoes-abas .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.informacoes-abas .redes-sociais li a {
+    width: 250px;
+    background-color: #02d08f;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.informacoes-abas .redes-sociais .curriculo:hover {
+    background-color: #02d08f;
+    opacity: 0.8;
+}
+.informacoes-abas .redes-sociais .linkedin:hover {
+    background-color: #1d87bd;
+    opacity: 0.8;
+}
+.informacoes-abas .redes-sociais .github:hover {
+    background-color: #545454;
+    opacity: 0.8;
+}
+
+.informacoes-abas .informacao.selecionada {
+    display: block;
 }
